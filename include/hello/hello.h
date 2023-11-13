@@ -1,4 +1,6 @@
 #pragma once
 
-void say_hello();
+namespace hello {
+    void say_hello();
+}
 
