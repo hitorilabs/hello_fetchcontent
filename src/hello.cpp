@@ -3,7 +3,7 @@
 
 namespace hello {
     void say_hello() {
-        std::cout << "Hello from MyLibrary!" << std::endl;
+        std::cout << "Hello from hello (library)!" << std::endl;
     }
 }
 
