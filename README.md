@@ -24,3 +24,36 @@ target_include_directories(mylib PUBLIC
 )
 ```
 
+---
+
+# Example Usage
+
+`CMakeLists.txt`
+
+```cmake
+cmake_minimum_required(VERSION 3.14)
+project(hello_world LANGUAGES CXX)
+
+include(FetchContent)
+FetchContent_Declare(
+  hello_fetchcontent # must match project name
+  GIT_REPOSITORY https://github.com/hitorilabs/hello_fetchcontent.git
+  GIT_TAG        4452972acce7c73c981bec6490e98b0d20d64ba7
+)
+FetchContent_MakeAvailable(hello_fetchcontent)
+
+add_executable(hello_world hello.cpp)
+
+# link executable to library (project_name::namespace)
+target_link_libraries(hello_world hello_fetchcontent::hello)
+```
+
+`hello_world.cpp`
+
+```cpp
+#include <hello/hello.h>
+
+int main() {
+    hello::say_hello();
+}
+```
