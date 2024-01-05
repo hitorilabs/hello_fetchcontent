@@ -38,7 +38,7 @@ include(FetchContent)
 FetchContent_Declare(
   hello_fetchcontent # must match project name
   GIT_REPOSITORY https://github.com/hitorilabs/hello_fetchcontent.git
-  GIT_TAG        4452972acce7c73c981bec6490e98b0d20d64ba7
+  GIT_TAG        e6bb1307cef00ba40b6e8cac2da798905eed0397
 )
 FetchContent_MakeAvailable(hello_fetchcontent)
 
